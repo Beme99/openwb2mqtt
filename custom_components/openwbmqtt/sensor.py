@@ -19,10 +19,8 @@ from .common import OpenWBBaseEntity
 
 # Import global values.
 from .const import (
-    CHARGE_POINTS,
     MQTT_ROOT_TOPIC,
     SENSORS_GLOBAL,
-    SENSORS_PER_LP,
     openwbSensorEntityDescription,
 )
 
