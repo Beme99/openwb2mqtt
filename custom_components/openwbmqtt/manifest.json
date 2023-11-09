@@ -1,7 +1,7 @@
 {
   "domain": "openwb2mqtt",
   "name": "openWB2.x over MQTT",
-  "codeowners": ["@Beme99""],
+  "codeowners": ["@Beme99"],
   "config_flow": true,
   "dependencies": ["mqtt"],
   "documentation": "https://github.com/Beme99/openwb2mqtt",
