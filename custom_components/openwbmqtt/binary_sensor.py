@@ -17,10 +17,10 @@ from .common import OpenWBBaseEntity
 # Import global values.
 from .const import (
     BINARY_SENSORS_GLOBAL,
-    BINARY_SENSORS_PER_LP,
-    CHARGE_POINTS,
+    #BINARY_SENSORS_PER_LP,
+    #CHARGE_POINTS,
     MQTT_ROOT_TOPIC,
-    openwbBinarySensorEntityDescription,
+    #openwbBinarySensorEntityDescription,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -49,23 +49,23 @@ async def async_setup_entry(
             )
         )
     # Create all sensors for each charge point, respectively.
-    for chargePoint in range(1, nChargePoints + 1):
-        local_sensors_per_lp = copy.deepcopy(BINARY_SENSORS_PER_LP)
-        for description in local_sensors_per_lp:
-            description.mqttTopicCurrentValue = (
-                f"{mqttRoot}/lp/{str(chargePoint)}/{description.key}"
-            )
-            _LOGGER.debug("mqttTopic: %s", description.mqttTopicCurrentValue)
-            sensorList.append(
-                openwbBinarySensor(
-                    uniqueID=integrationUniqueID,
-                    description=description,
-                    nChargePoints=int(nChargePoints),
-                    currentChargePoint=chargePoint,
-                    device_friendly_name=integrationUniqueID,
-                    mqtt_root=mqttRoot,
-                )
-            )
+    #for chargePoint in range(1, nChargePoints + 1):
+    #    local_sensors_per_lp = copy.deepcopy(BINARY_SENSORS_PER_LP)
+    #    for description in local_sensors_per_lp:
+    #        description.mqttTopicCurrentValue = (
+    #            f"{mqttRoot}/lp/{str(chargePoint)}/{description.key}"
+    #        )
+    #        _LOGGER.debug("mqttTopic: %s", description.mqttTopicCurrentValue)
+    #        sensorList.append(
+    #            openwbBinarySensor(
+    #                uniqueID=integrationUniqueID,
+    #                description=description,
+    #                nChargePoints=int(nChargePoints),
+    #                currentChargePoint=chargePoint,
+    #                device_friendly_name=integrationUniqueID,
+    #                mqtt_root=mqttRoot,
+    #            )
+    #        )
 
     async_add_entities(sensorList)
 
