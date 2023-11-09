@@ -39,7 +39,7 @@ PLATFORMS = [
 ]
 
 # Global values
-DOMAIN = "openwbmqtt"
+DOMAIN = "openwb2mqtt"
 MQTT_ROOT_TOPIC = "mqttroot"
 MQTT_ROOT_TOPIC_DEFAULT = "openWB"
 CHARGE_POINTS = "chargepoints"
