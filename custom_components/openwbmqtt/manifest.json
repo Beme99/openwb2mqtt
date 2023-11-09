@@ -1,13 +1,13 @@
 {
   "domain": "openwb2mqtt",
   "name": "openWB2.x over MQTT",
-  "codeowners": ["@a529987659852"],
+  "codeowners": ["@Beme99""],
   "config_flow": true,
   "dependencies": ["mqtt"],
-  "documentation": "https://github.com/a529987659852/openWB-mqtt",
+  "documentation": "https://github.com/Beme99/openwb2mqtt",
   "integration_type": "device",
   "iot_class": "local_polling",
-  "issue_tracker": "https://github.com/a529987659852/openwbmqtt/issues",
+  "issue_tracker": "https://github.com/Beme99/openwb2mqtt/issues",
   "requirements": [],
   "version": "0.6"
 }
